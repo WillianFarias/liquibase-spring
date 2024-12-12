@@ -4,15 +4,5 @@
                    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
                    https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
 
-    <changeSet id="0" author="admin">
-        <createTable tableName="orders">
-            <column name="id" autoIncrement="true" type="bigint">
-                <constraints primaryKey="true" nullable="false" />
-            </column>
-            <column name="product" type="varchar(100)" />
-            <column name="price" type="decimal(6,2)">
-                <constraints nullable="false" />
-            </column>
-        </createTable>
-    </changeSet>
+    <include file="db/changelog/changes/0001-create-orders-table.xml" />
 </databaseChangeLog>
